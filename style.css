@@ -1,0 +1,224 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.all{
+    width: 650px;
+    margin: auto;
+}
+
+header .title{
+    margin: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+.title h1{
+    background-color: green;width: 93%;
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+}
+.title button{
+    width: 6%;
+    padding: 5px;
+    font-size: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+
+nav{
+    width: 100%;
+    margin-bottom: 20px;
+}
+nav ul {
+    display: flex;
+}
+nav li{
+   list-style-type: none;
+   padding: 0px 2px;
+}
+nav a{
+    text-decoration: none;
+    background-color: grey;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+}
+.sec1{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    gap: 5px;
+}
+.sec1 .card-men{
+    border-radius: 10px;
+    width: 24.5%;
+    padding: 10px;
+    background-color: #bdd7ee;
+}
+.card-men .delet{
+    width: 25px;
+    cursor: pointer;
+}
+.card-men .modify{
+    width: 25px;
+    cursor: pointer;
+}
+.card-men .infos .user{
+    width: 90px;
+    display: block;
+    margin: auto;
+    padding: 5px;
+    background-color:#dae3f3 ;
+    border-radius: 100%;
+}
+.sec1 .card-women{
+    border-radius: 10px;
+    width: 24.5%;
+    padding: 10px;
+    background-color: #f8cbad;
+}
+.card-women .delet{
+    width: 25px;
+    cursor: pointer;
+}
+.card-women .modify{
+    width: 25px;
+    cursor: pointer;
+}
+.card-women .infos .user{
+    width: 90px;
+    display: block;
+    margin: auto;
+    padding: 5px;
+    background-color:#fbe5d6 ;
+    border-radius: 100%;
+}
+.sec1 #info p{
+    text-align: center;
+    margin: 5px 0px;
+    font-size: 15px;
+}
+.sec1 #info .name{
+    text-align: center;
+    margin: 5px 0px;
+    font-weight: bold;
+    color: rgb(16, 71, 134);
+}
+.sec1 .card-women #info .name{
+    text-align: center;
+    margin: 5px 0px;
+    font-weight: bold;
+    color: #864215;
+}
+.sec1 #info .moy .index{
+   background-color: rgb(13, 13, 94);
+   color: white;
+   padding: 0px 5px;
+   text-align: center;
+   margin-right: 5px;
+   border-radius: 5px;
+}
+.sec1 .card-women #info .moy .index{
+    background-color: #864215;
+    color: white;
+    padding: 0px 5px;
+    text-align: center;
+    margin-right: 5px;
+    border-radius: 5px;
+ }
+.sec1 #info .moy {
+    background-color: #dae3f3;
+    border-radius: 5px;
+    display: flex;
+    padding: 3px;
+    padding-right: 5px;
+}
+.sec1 .card-women #info .moy {
+    background-color: #fbe5d6;
+    border-radius: 5px;
+    display: flex;
+    padding: 3px;
+    padding-right: 5px;
+}
+
+.sec2{
+    width: 100%;
+    height: auto;
+}
+.sec2 h1{
+    text-align: center;
+    padding: 10px 0px;
+    color: green;
+}
+.sec2 input,select{
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    outline: none;
+}
+.sec2 #nom,#prenom,#classe,#genre,#cc1,#cc2,#cc3{
+    width: 32%;
+}
+.sec2 #specialite{
+    width: 64.5%;
+}
+.sec2 .ajouter{
+    display: block;
+    margin: auto;
+    padding: 8px;
+    width: 40%;
+    border-radius: 10px;
+    border: none;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+
+.sec3{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    display: none;
+}
+.sec3 img{
+    width: 30%;
+}
+.sec3 p{
+    color: #0e5395;
+    margin: 10px 0px;
+    font-size: 25px;
+}
+.sec3 p span {
+    color: #0e5395;
+    font-weight: bold;
+    font-size: 30px;
+}
+.sec3 .confirmer{
+    padding: 8px;
+    width: 40%;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    background-color: #0e5395;
+    color: white;
+    cursor: pointer;
+}
+.sec3 .annuler{
+    padding: 8px;
+    width: 40%;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    background-color: gray;
+    color: white;
+    cursor: pointer;
+}

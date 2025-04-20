@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="all">
+      <header>
+        <div class="title">
+            <h1>listes des stagaires</h1>
+            <button onclick="goTOsec2()">+</button>
+        </div>
+        <nav>
+            <ul id="nav"></ul>
+        </nav>
+      </header>
+      <section class="sec1" id="sec1"></section>
+      <section class="sec2" id="sec2">
+        <h1>Formulaire d'inscription</h1>
+        <div class="form">
+            <input type="text" name="nom" id="nom" placeholder="Nom ...">
+
+            <input type="text" name="prenom" id="prenom" placeholder="Prenom ...">
+
+         <select name="genre" id="genre" required>
+            <option>Genre</option>
+            <option value="Homme">Homme</option>
+            <option value="Femme">Femme</option>
+         </select>
+
+         <select name="specialite" id="specialite">
+            <option>Spécialité</option>
+            <option value="Développement Digital">Développement Digital</option>
+            <option value="UI/UX">UI/UX</option>
+            <option value="Infrastructure Digital">Infrastructure Digital</option>
+            <option value="Intéligence Artificielle">Intéligence Artificielle</option>
+         </select>
+
+            <input type="text" name="classe" id="classe" placeholder="Classe ...">
+
+            <input type="number" name="cc1" id="cc1" placeholder="Note M101 ...">
+
+            <input type="number" name="cc2" id="cc2" placeholder="Note M102 ...">
+
+            <input type="number" name="cc3" id="cc3" placeholder="Note M103 ...">
+        </div>
+
+        <button class="ajouter" onclick="ajouter()">Ajouter le Stagiare</button>
+      </section>
+      <section class="sec3" id="sec3">
+      </section>
+    </div>
+    
+    <script src="./index.js"></script>
+</body>
+</html>

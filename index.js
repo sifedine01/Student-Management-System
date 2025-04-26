@@ -1,22 +1,22 @@
 let users = [];
+let currentEditIndex = -1; 
 window.onload = function() {
     const savedData = localStorage.getItem('studentCard');
     if (savedData) {
         users = JSON.parse(savedData);
-        afficher();
+        afficher(users);
     }
 };
-
 function saveToLocalStorage() {
     localStorage.setItem('studentCard', JSON.stringify(users));
 }
-let currentEditIndex = -1; 
 document.getElementById("sec2").style.display = "none";
 document.getElementById("sec3").style.display = "none";
-
+                              
 function goTOsec2() {
     document.getElementById("sec2").style.display = "block";
     document.getElementById("sec1").style.display = "none";
+    document.getElementById("sec3").style.display = "none";
 }
 
 function goTOsec1() {
@@ -31,20 +31,37 @@ function goTosec3() {
     document.getElementById("sec1").style.display = "none";
 }
 
-let specialites = ["Développement Digital", "UI/UX", "Infrastructure Digital", "Intéligence Artificielle"];
+let specialites = [{
+    id:'DD',
+    spec:'Développement Digital'
+},
+{
+    id:'UI',
+    spec:'UI/UX'
+},
+{
+    id:'ID',
+    spec:'Infrastructure Digital'
+},
+{
+    id:'IA',
+    spec:'Intéligence Artificielle'
+}
+]
+
 let text = '';
-specialites.forEach((spec) => {
-    text += `<li><a href="">${spec}</a></li>`;
+specialites.forEach((speci) => {
+    text += `<li onclick="afficherSpe('${speci.id}')"><a href="">${speci.spec}</a></li>`;
     document.getElementById("nav").innerHTML = text;
 });
 
 function ajouter() {
     let nom = document.getElementById('nom').value;
     let prenom = document.getElementById('prenom').value;
-    let genre = document.getElementById('genre').value.toLowerCase(); // Convert to lowercase
+    let genre = document.getElementById('genre').value.toLowerCase();
     let specialite = document.getElementById('specialite').value;
     let classe = document.getElementById('classe').value;
-    let cc1 = parseFloat(document.getElementById('cc1').value) || 0; // Convert to number
+    let cc1 = parseFloat(document.getElementById('cc1').value) || 0;
     let cc2 = parseFloat(document.getElementById('cc2').value) || 0;
     let cc3 = parseFloat(document.getElementById('cc3').value) || 0;
     
@@ -61,7 +78,7 @@ function ajouter() {
         currentEditIndex = -1;
     }
     saveToLocalStorage();
-    afficher();
+    afficher(users);
     goTOsec1();
     document.getElementById('nom').value = '';
     document.getElementById('prenom').value = '';
@@ -73,9 +90,9 @@ function ajouter() {
     document.getElementById('cc3').value = '';
 }
 
-function afficher() {
+function afficher(list) {
     let text1 = '';
-    users.forEach((user, i) => {
+    list.forEach((user, i) => {
         let moy = (user.notes.cc1 + user.notes.cc2 + user.notes.cc3) / 3;
 
         let UMorUW = user.identite.genre === "homme" ? "men.png" : "women.png";
@@ -135,4 +152,12 @@ function confirmer(i){
     saveToLocalStorage();
     afficher();
     goTOsec1();
+}
+
+function afficherSpe(id) {
+    let newData1 = users.filter((user) => {
+        return user.specialite === id;
+    });
+
+    afficher(newData1);
 }
